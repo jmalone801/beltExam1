@@ -16,7 +16,7 @@ const Update = (props) => {
 
     // Retrieves one single pet by id
     useEffect(() => {
-        axios.get('http://localhost:8000/pet/' + _id)
+        axios.get('http://localhost:8000/api/pet/' + _id)
             .then(res => {
                 setName(res.data.name);
                 setType(res.data.type);
@@ -31,7 +31,7 @@ const Update = (props) => {
     // Updates one single pet by id
     const updatePet = event => {
         event.preventDefault();
-        axios.put('http://localhost:8000/pet/update/' + _id, {
+        axios.put('http://localhost:8000/api/pet/update/' + _id, {
             name,
             type,
             description,

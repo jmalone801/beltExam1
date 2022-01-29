@@ -9,6 +9,7 @@ import Detail from './views/Detail';
 function App() {
   return (
     <div className="App">
+      <h1>Pet Shop</h1>
       <BrowserRouter>
         <Switch>
 

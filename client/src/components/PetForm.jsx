@@ -17,7 +17,7 @@ const PetForm = (props) => {
     //handler when the form is submitted
     const onSubmitHandler = event => {
         event.preventDefault();
-        axios.post('http://localhost:8000/pets/new', {
+        axios.post('http://localhost:8000/api/pets/new', {
             name,
             type,
             description,

@@ -9,14 +9,14 @@ const Detail = (props) => {
 
     // Retrieves one single item by id
     useEffect(() => {
-        axios.get('http://localhost:8000/pet/' + _id)
+        axios.get('http://localhost:8000/api/pet/' + _id)
             .then(res => setPets(res.data))
             .catch(err => console.error(err));
     }, [_id]);
 
     // Deletes one pet
     const deleteProduct = (_id) => {
-        axios.delete('http://localhost:8000/pet/delete/' + _id)
+        axios.delete('http://localhost:8000/api/pet/delete/' + _id)
             .then(res => {
                 history.push("/pets/all")
             })

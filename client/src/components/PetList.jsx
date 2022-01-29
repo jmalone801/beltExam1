@@ -8,7 +8,7 @@ const PetList = (props) => {
 
     // Displays all pets
     useEffect(() => {
-        axios.get('http://localhost:8000/pets/all')
+        axios.get('http://localhost:8000/api/pets/all')
             .then(res => {
                 setPets(res.data);
             })
